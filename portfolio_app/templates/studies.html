@@ -1,6 +1,6 @@
-{% extends "layouts/base.html" %} 
-{% block title %}Estudios{% endblock %} 
-{% block subtitle %}Mis Estudios{% endblock %} 
+{% extends "layouts/base.html" %}
+{% block title %}Estudios{% endblock %}
+{% block subtitle %}Mis Estudios{% endblock %}
 {% block content %}
 
 <div class="--bs-light-border-subtle p-4 text-center">
@@ -32,7 +32,7 @@
 <div class="--bs-light-border-subtle p-5 text-center">
     <h3 class="text-dark">Cursos</h3>
 </div>
-  
+
 
 <div class="container text-center">
   <div class="row justify-content-center gx-3 gy-5">
@@ -45,7 +45,7 @@
             {{ course.subtitle }}
           </h6>
           <h7 class="card-subtitle mb-2 text-body-secondary">
-            {{ course.start_date }} {{course.end_date}}
+            {{ course.start_date }} - {% if course.end_date %}{{course.end_date}}{%else%}En Curso{% endif %}
           </h7>
           <p class="card-text">{{ course.description }}</p>
           {% if course.certificate %}

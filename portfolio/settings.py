@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-(n_3wig+*lsx76c#3l!u%-kwiq&70v*aa1^u2dj2glr^y_q=^!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ankara99.pythonanywhere.com']
 
 
 # Application definition
@@ -77,13 +77,13 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'portfoliodb',
-        'USER': 'root',
-        'PASSWORD': '753159',
-        'HOST': 'localhost',
+        'NAME': 'ankara99$default',
+        'USER': 'ankara99',
+        'PASSWORD': 'morenodelehmann1',
+        'HOST': 'ankara99.mysql.pythonanywhere-services.com',
         'PORT': '3306',
     }
-}   
+}
 
 
 # Password validation
@@ -108,9 +108,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-ar'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Argentina/Buenos_Aires'
 
 USE_I18N = True
 
@@ -121,6 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / "media"
